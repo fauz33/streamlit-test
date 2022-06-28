@@ -14,4 +14,12 @@ loaded_model = joblib.load('LR_model.joblib')
 sentiment = loaded_model.predict([textinput])[0]
 
 if submit_button:
-    st.write(f'{sentiment}')
+	if sentiment=='positive':
+		st.success('Positive Sentiment!')
+	elif sentiment=='negative':
+		st.error('Negative Sentiment!')
+	elif sentiment=='neutral':
+		st.error('Neutral Sentiment!')
+
+
+    
