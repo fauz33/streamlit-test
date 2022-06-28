@@ -1,10 +1,17 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import joblib
 
-st.title("Sentiment Analysis of Tweets about US Airlines")
-st.sidebar.title("Sentiment Analysis of Tweets")
-st.markdown("This application is a Streamlit dashboard used "
-            "to analyze sentiments of tweets ????")
-st.sidebar.markdown("This application is a Streamlit dashboard used "
-            "to analyze sentiments of tweets ????")
+st.title("My First Streamlit Demo")
+
+form = st.form(key='my_form')
+textinput = form.text_input(label='Enter some text')
+submit_button = form.form_submit_button(label='Submit')
+
+loaded_model = joblib.load('LR_model.joblib')
+
+sentiment = loaded_model.predict([textinput])[0]
+
+if submit_button:
+    st.write(f'{sentiment}')
