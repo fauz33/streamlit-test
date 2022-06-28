@@ -3,3 +3,4 @@ streamlit
 joblib
 sklearn
 sklearn-pandas
+daal4py
