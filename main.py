@@ -19,7 +19,7 @@ if submit_button:
 	elif sentiment=='negative':
 		st.error('Negative Sentiment!')
 	elif sentiment=='neutral':
-		st.error('Neutral Sentiment!')
+		st.info('Neutral Sentiment!')
 
 
     
