@@ -4,6 +4,7 @@ import numpy as np
 import joblib
 
 st.title("My First Streamlit Demo")
+st.markdown('Sentiment Analysis. Logistic Regression model trained using COVID-19 vaccines tweets.')
 
 form = st.form(key='my_form')
 textinput = form.text_input(label='Enter some text')
