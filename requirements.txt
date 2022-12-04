@@ -1,6 +1,6 @@
 pandas
 streamlit
 joblib
-sklearn
+scikit-learn
 sklearn-pandas
 daal4py
